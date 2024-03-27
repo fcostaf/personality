@@ -1,0 +1,47 @@
+body{
+    background-color: antiquewhite;
+    color: darkred;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+button{
+    background-color: darkslategrey;
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    width: 80px;
+    border-radius: 25%;
+}
+
+table{
+    background-color: cadetblue;
+    color: white;
+    font-size: 20pt;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: darkred;
+    color: cadetblue;
+}
+
+td{
+    padding: 10px;
+}
+
+a{
+   color: cadetblue;
+   font-size: 15pt;
+}
+
+input[type=submit]{
+    background-color: teal;
+    color: darkred;
+    height: 40px;
+    width: 60px;
+    border-radius: 25%;
+    font-weight: bold;
+}
