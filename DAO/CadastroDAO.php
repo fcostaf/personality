@@ -1,12 +1,14 @@
 <?php
-class GeneroDAO{
-    public function cadastrarGenero(GeneroModel $cadastro){
+class CadastroDAO{
+    public function cadastrarCadastro(CadastroModel $cadastro){
         include_once 'Conexao.php';
         $conex=new Conexao();
         $conex->fazConexao();
-        $sql="INSERT INTO cadastro (nome) VALUES (:nome)";
+        $sql="INSERT INTO cadastro (nome,idade,genero) VALUES (:nome,:idade,:genero)";
         $stmt=$conex->conn->prepare($sql);
         $stmt->bindValue(':nome',$cadastro->getNome());
+        $stmt->bindValue(':idade',$cadastro->getIdade());
+        $stmt->bindValue(':genero',$cadastro->getGenero());
         $res=$stmt->execute();
         if($res){
             echo "<script>alert('Cadastro Realizado com sucesso');</script>";
@@ -14,10 +16,10 @@ class GeneroDAO{
         else{
             echo "<script>alert('Erro: Não foi possível realizar o cadastro');</script>";
         }
-        echo "<script>location.href='../controller/processaGenero.php?op=Listar';</script>";
+        echo "<script>location.href='../controller/processaCadastro.php?op=Listar';</script>";
     }
 
-    public function listarGeneros(){
+    public function listarCadastros(){
         include_once 'Conexao.php';
         $conex=new Conexao();
         $conex->fazConexao();
@@ -25,22 +27,24 @@ class GeneroDAO{
         return $conex->conn->query($sql);
     }
 
-    public function resgataPorID($idGenero){
+    public function resgataPorID($idCadastro){
         include_once 'Conexao.php';
         $conex=new Conexao();
         $conex->fazConexao();
-        $sql="SELECT * FROM cadastro WHERE idgenero='$idGenero'";
+        $sql="SELECT * FROM cadastro WHERE idcadastro='$idCadastro'";
         return $conex->conn->query($sql);
     }
 
-    public function alterarGenero(GeneroModel $cadastro){
+    public function alterarCadastro(CadastroModel $cadastro){
         include_once 'Conexao.php';
         $conex=new Conexao();
         $conex->fazConexao();
-        $sql="UPDATE cadastro SET nome=:nome WHERE idgenero=:id";
+        $sql="UPDATE cadastro SET nome=:nome,idade=:idade,genero=:genero WHERE idcadastro=:id";
         $stmt=$conex->conn->prepare($sql);
         $stmt->bindValue(':id',$cadastro->getID());
         $stmt->bindValue(':nome',$cadastro->getNome());
+        $stmt->bindValue(':idade',$cadastro->getIdade());
+        $stmt->bindValue(':genero',$cadastro->getGenero());
         $res=$stmt->execute();
         if($res){
             echo "<script>alert('Registro Alterado com sucesso');</script>";
@@ -48,14 +52,14 @@ class GeneroDAO{
         else{
             echo "<script>alert('Erro: Não foi possível alterar o cadastro');</script>";
         }
-        echo "<script>location.href='../controller/processaGenero.php?op=Listar';</script>";
+        echo "<script>location.href='../controller/processaCadastro.php?op=Listar';</script>";
     }
 
-    public function excluirGenero($idGenero){
+    public function excluirCadastro($idCadastro){
         include_once 'Conexao.php';
         $conex=new Conexao();
         $conex->fazConexao();
-        $sql="DELETE FROM cadastro WHERE idgenero='$idGenero'";
+        $sql="DELETE FROM cadastro WHERE idcadastro='$idCadastro'";
         $res=$conex->conn->query($sql);
         if($res){
             echo "<script>alert('Exclusão realizada com sucesso!');</script>";
@@ -63,7 +67,7 @@ class GeneroDAO{
         else{
             echo "<script>alert('Não foi possível excluir o usuário!');</script>";
         }
-        echo "<script>location.href='../controller/processaGenero.php?op=Listar';</script>";
+        echo "<script>location.href='../controller/processaCadastro.php?op=Listar';</script>";
     }
 }
 ?>

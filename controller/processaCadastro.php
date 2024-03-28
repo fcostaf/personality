@@ -16,17 +16,21 @@ switch($_REQUEST["op"]){
 
 function incluir(){
     $nome=$_POST["nome"];
+    $idade=$_POST["idade"];
+    $genero=$_POST["genero"];
     include 'CadastroController.php';
     $contr=new CadastroController();
-    $contr->cadastrarCadastro($nome);
+    $contr->cadastrarCadastro($nome,$idade,$genero);
 }
 
 function alterar(){
     $nome=$_POST["nome"];
+    $idade=$_POST["idade"];
+    $genero=$_POST["genero"];
     $id=$_POST["id"];
     include 'CadastroController.php';
     $contr=new CadastroController();
-    $contr->alterarCadastro($id,$nome);
+    $contr->alterarCadastro($id,$nome,$idade,$genero);
 }
 
 function excluir(){

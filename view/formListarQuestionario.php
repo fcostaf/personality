@@ -33,22 +33,20 @@ echo '<!DOCTYPE html>
             $resGen=$resGen->fetch(PDO::FETCH_OBJ);
             echo "<tr>
                     <td>$row->idquestionario</td>
-                    <td>$row->questao1</td>";
-                    if($resGen->nome=='Poesia'){
-                        echo "<td style='background-color:pink'>$resGen->nome</td>";
-                    }
-                    if($resGen->nome=='Ficção'){
-                        echo "<td style='background-color:lightblue'>$resGen->nome</td>";
-                    }
-                    if($resGen->nome=='não-Ficção'){
-                        echo "<td style='background-color:lightyellow'>$resGen->nome</td>";
-                    }
-                    if($resGen->nome=='Drama'){
-                        echo "<td style='background-color:lightgreen'>$resGen->nome</td>";
-                    }
+                    <td>$row->questao1</td>;
+                    <td>$row->questao2</td>;
+                    <td>$row->questao3</td>;
+                    <td>$row->questao4</td>;
+                    <td>$row->questao5</td>;
+                    <td>$row->questao6</td>;
+                    <td>$row->questao7</td>;
+                    <td>$row->questao8</td>;
+                    <td>$row->questao9</td>;
+                    "
+            echo "<td style='background-color:pink'>$resGen->nome</td>";
                     echo "<td>
-                    <button onclick=\"location.href='../view/formQuestionario.php?op=Alterar&idQuestionario=".$row->idsubgenero."';\">Alterar</button>
-                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='../controller/processaQuestionario.php?op=Excluir&idQuestionario=".$row->idsubgenero."';}
+                    <button onclick=\"location.href='../view/formQuestionario.php?op=Alterar&idQuestionario=".$row->idquestionario."';\">Alterar</button>
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='../controller/processaQuestionario.php?op=Excluir&idQuestionario=".$row->idquestionario."';}
                     else{false;}\">Excluir</button>
                     </td>";
         }

@@ -22,7 +22,7 @@ echo '<!DOCTYPE html>
                 </tr>';
         while($row=$res->fetch(PDO::FETCH_OBJ)){
             echo "<tr>
-                    <td>$row->idgenero</td>
+                    <td>$row->idcadastro</td>
                     <td>$row->nome</td>
                     <td>$row->idade</td>
                     <td>$row->genero</td>

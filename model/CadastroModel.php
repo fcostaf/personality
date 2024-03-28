@@ -1,11 +1,15 @@
 <?php
-class GeneroModel{
+class CadastroModel{
     protected $nome;
+    protected $idade;
+    protected $genero;
     protected $id;
 
-    public function __construct($id,$nome){
+    public function __construct($id,$nome,$idade,$genero){
         $this->id=$id;
         $this->nome=$nome;
+        $this->idade=$idade;
+        $this->genero=$genero;
     }
 
     public function getID(){
@@ -16,44 +20,60 @@ class GeneroModel{
         return $this->nome;
     }
 
+    public function getIdade(){
+        return $this->idade;
+    }
+
+    public function getGenero(){
+        return $this->genero;
+    }
+
     public function setNome($nome){
         $this->nome=$nome;
     }
 
-    public function cadastrarGenero(GeneroModel $cadastro){
-        include_once '../dao/GeneroDAO.php';
-        $cadastro=new GeneroDAO();
-        $cadastro->cadastrarGenero($this);
+    public function setIdade($idade){
+        $this->idade=$idade;
     }
 
-    public function listarGeneros(){
-        include_once '../dao/GeneroDAO.php';
-        $dao=new GeneroDAO(null);
-        return $dao->listarGeneros();
+    public function setGenero($genero){
+        $this->genero=$genero;
     }
 
-    public function resgataPorID($idGenero){
-        include '../dao/GeneroDAO.php';
-        $model=new GeneroDAO(null);
-        return $model->resgataPorID($idGenero);
+    public function cadastrarCadastro(CadastroModel $cadastro){
+        include_once '../dao/CadastroDAO.php';
+        $cadastro=new CadastroDAO();
+        $cadastro->cadastrarCadastro($this);
     }
 
-    public function resgataPorIDSub($idGenero){
-        include_once '../dao/GeneroDAO.php';
-        $model=new GeneroDAO(null);
-        return $model->resgataPorID($idGenero);
+    public function listarCadastros(){
+        include_once '../dao/CadastroDAO.php';
+        $dao=new CadastroDAO(null);
+        return $dao->listarCadastros();
     }
 
-    public function alterarGenero(GeneroModel $cadastro){
-        include_once '../dao/GeneroDAO.php';
-        $cadastro=new GeneroDAO();
-        $cadastro->alterarGenero($this);
+    public function resgataPorID($idCadastro){
+        include '../dao/CadastroDAO.php';
+        $model=new CadastroDAO(null);
+        return $model->resgataPorID($idCadastro);
     }
 
-    public function excluirGenero($idGenero){
-        include_once '../dao/GeneroDAO.php';
-        $cadastro=new GeneroDAO();
-        $cadastro->excluirGenero($idGenero);
+    public function resgataPorIDSub($idCadastro){
+        include_once '../dao/CadastroDAO.php';
+        $model=new CadastroDAO(null);
+        return $model->resgataPorID($idCadastro);
+    }
+
+    public function alterarCadastro(CadastroModel $cadastro){
+        include_once '../dao/CadastroDAO.php';
+        $cadastro=new CadastroDAO();
+        $cadastro->alterarCadastro($this);
+    }
+
+    public function excluirCadastro($idCadastro){
+        include_once '../dao/CadastroDAO.php';
+        $cadastro=new CadastroDAO();
+        $cadastro->excluirCadastro($idCadastro);
     }
 }
 ?>
