@@ -42,7 +42,7 @@ echo '<!DOCTYPE html>
                     <td>$row->questao7</td>;
                     <td>$row->questao8</td>;
                     <td>$row->questao9</td>;
-                    "
+                    ";
             echo "<td style='background-color:pink'>$resGen->nome</td>";
                     echo "<td>
                     <button onclick=\"location.href='../view/formQuestionario.php?op=Alterar&idQuestionario=".$row->idquestionario."';\">Alterar</button>
