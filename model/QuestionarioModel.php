@@ -116,7 +116,7 @@ class QuestionarioModel{
         $questionario->cadastrarQuestionario($this);
     }
 
-    public function listarQuestionario(){
+    public function listarQuestionarios(){
         include '../dao/QuestionarioDAO.php';
         $dao=new QuestionarioDAO(null);
         return $dao->listarQuestionarios();

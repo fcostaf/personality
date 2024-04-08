@@ -8,13 +8,13 @@ class QuestionarioController{
 
     public static function listarQuestionarios(){
         include_once '../model/QuestionarioModel.php';
-        $model=new QuestionarioModel(null,null,null,null,null,null,null,null,null);
+        $model=new QuestionarioModel(null,null,null,null,null,null,null,null,null,null,null);
         return $model->listarQuestionarios();
     }
 
     public static function resgataPorID($idQuestionario){
         include_once '../model/QuestionarioModel.php';
-        $model=new QuestionarioModel(null,null,null,null,null,null,null,null,null);
+        $model=new QuestionarioModel(null,null,null,null,null,null,null,null,null,null,null);
         return $model->resgataPorID($idQuestionario);
     }
 
@@ -26,7 +26,7 @@ class QuestionarioController{
 
     public static function excluirQuestionario($id){
         include '../model/QuestionarioModel.php';
-        $questionario=new QuestionarioModel(null,null,null,null,null,null,null,null,null);
+        $questionario=new QuestionarioModel(null,null,null,null,null,null,null,null,null,null,null);
         $questionario->excluirQuestionario($id);
     }
 }
