@@ -15,36 +15,44 @@ echo '<!DOCTYPE html>
         echo '<table>
                 <tr>
                 <th>#</th>
+                <th>Nome</th>
                 <th>Questão1</th>
                 <th>Questão2</th>
                 <th>Questão3</th>
+                <th>Med1</th>
                 <th>Questão4</th>
                 <th>Questão5</th>
                 <th>Questão6</th>
+                <th>Med2</th>
                 <th>Questão7</th>
                 <th>Questão8</th>
                 <th>Questão9</th>
-                <th>Nome</th>
+                <th>Med3</th>
                 <th></th><th></th>
                 </tr>';
         while($row=$res->fetch(PDO::FETCH_OBJ)){
             include_once "../controller/CadastroController.php";
             $resGen=CadastroController::resgataPorIDSub($row->cadastro_idcadastro);
             $resGen=$resGen->fetch(PDO::FETCH_OBJ);
+            $medA=round(($row->questao1+$row->questao2+$row->questao3)/3,1);
+            $medB=round(($row->questao4+$row->questao5+$row->questao6)/3,1);
+            $medC=round(($row->questao7+$row->questao8+$row->questao9)/3,1);
             echo "<tr>
                     <td>$row->idquestionario</td>
-                    <td>$row->questao1</td>;
-                    <td>$row->questao2</td>;
-                    <td>$row->questao3</td>;
-                    <td>$row->questao4</td>;
-                    <td>$row->questao5</td>;
-                    <td>$row->questao6</td>;
-                    <td>$row->questao7</td>;
-                    <td>$row->questao8</td>;
-                    <td>$row->questao9</td>;
-                    ";
-            echo "<td style='background-color:pink'>$resGen->nome</td>";
-                    echo "<td>
+                    <td>$resGen->nome</td>
+                    <td>$row->questao1</td>
+                    <td>$row->questao2</td>
+                    <td>$row->questao3</td>
+                    <td class='med1'>$medA</td>
+                    <td>$row->questao4</td>
+                    <td>$row->questao5</td>
+                    <td>$row->questao6</td>
+                    <td class='med2'>$medB</td>
+                    <td>$row->questao7</td>
+                    <td>$row->questao8</td>
+                    <td>$row->questao9</td>
+                    <td class='med3'>$medC</td>
+                    <td>
                     <button onclick=\"location.href='../view/formQuestionario.php?op=Alterar&idQuestionario=".$row->idquestionario."';\">Alterar</button>
                     <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='../controller/processaQuestionario.php?op=Excluir&idQuestionario=".$row->idquestionario."';}
                     else{false;}\">Excluir</button>

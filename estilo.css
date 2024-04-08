@@ -45,3 +45,13 @@ input[type=submit]{
     border-radius: 25%;
     font-weight: bold;
 }
+
+.med1{
+    background-color: aqua;
+}
+.med2{
+    background-color: lightslategrey;
+}
+.med3{
+    background-color: crimson;
+}
