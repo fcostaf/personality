@@ -11,8 +11,41 @@ echo '<!DOCTYPE html>
 </head>
 <body>';
 
+include "../controller/CadastroController.php";
+    $res=CadastroController::listarCadastros();
+    $qtd=$res->rowCount();
+    if($qtd>0){
+        $sum_idade=0;
+        $masc=0;
+        $fem=0;
+        echo '<table>
+                <tr>
+                <th>N</th>
+                <th>Média idade</th>
+                <th>Masculino</th>
+                <th>Feminino</th>
+                </tr>';
+        while($row=$res->fetch(PDO::FETCH_OBJ)){
 
+            $sum_idade+=$row->idade;
+            if($row->genero=='M'){
+                $masc+=1;
+            }else{
+                $fem+=1;}
+        }
+        $medI=round($sum_idade/$qtd,1);
 
+        echo "<tr>
+                <td>$qtd</td>
+                <td>$medI</td>
+                <td>$masc</td>
+                <td>$fem</td>
+                </tr>
+                </table>";
+
+    }else{
+        echo "<p>Nenhum registro encontrado!</p>";
+    }
 
 include_once "../controller/QuestionarioController.php";
     $res=QuestionarioController::listarQuestionarios();
@@ -29,7 +62,7 @@ include_once "../controller/QuestionarioController.php";
         $sum9=0;
         echo "<table>
                 <tr>
-                <th>N = $qtd</th>
+                <th></th>
                 <th>Questão1</th>
                 <th>Questão2</th>
                 <th>Questão3</th>

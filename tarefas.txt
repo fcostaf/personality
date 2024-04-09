@@ -1,1 +1,4 @@
-Fatal error: Uncaught ArgumentCountError: Too few arguments to function QuestionarioModel::__construct(), 9 passed in C:\xampp\htdocs\felipe\pi\controller\QuestionarioController.php on line 11 and exactly 11 expected in C:\xampp\htdocs\felipe\pi\model\QuestionarioModel.php:15 Stack trace: #0 C:\xampp\htdocs\felipe\pi\controller\QuestionarioController.php(11): QuestionarioModel->__construct(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) #1 C:\xampp\htdocs\felipe\pi\view\formListarQuestionario.php(12): QuestionarioController::listarQuestionarios() #2 {main} thrown in C:\xampp\htdocs\felipe\pi\model\QuestionarioModel.php on line 15
+clicar no nome da tabela cadastro e abrir linha correspondente do questionario
+de repente fazer um colspan do nome até o final e colocar toda a linha e cabeçário nesta longa td
+
+analise demográfica
