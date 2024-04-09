@@ -1,4 +1,1 @@
-clicar no nome da tabela cadastro e abrir linha correspondente do questionario
-de repente fazer um colspan do nome até o final e colocar toda a linha e cabeçário nesta longa td
-
-analise demográfica
+excluir

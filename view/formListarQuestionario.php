@@ -16,17 +16,17 @@ echo '<!DOCTYPE html>
                 <tr>
                 <th>#</th>
                 <th>Nome</th>
-                <th>Questão1</th>
-                <th>Questão2</th>
-                <th>Questão3</th>
+                <th>Sou ansioso</th>
+                <th>Sou infeliz</th>
+                <th>Sou raivoso</th>
                 <th>Med1</th>
-                <th>Questão4</th>
-                <th>Questão5</th>
-                <th>Questão6</th>
+                <th>Sou sociável</th>
+                <th>Sou falante</th>
+                <th>Sou participativo</th>
                 <th>Med2</th>
-                <th>Questão7</th>
-                <th>Questão8</th>
-                <th>Questão9</th>
+                <th>Sou inteligente</th>
+                <th>Sou perfeccionista</th>
+                <th>Sou curioso</th>
                 <th>Med3</th>
                 <th></th><th></th>
                 </tr>';

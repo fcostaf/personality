@@ -44,23 +44,23 @@ echo '<!DOCTYPE html>
     }
 
     echo '<form method="post" action="../controller/processaQuestionario.php">
-        <label for="questao1">Q1</label>
+        <label for="questao1">Sou ansioso.</label>
         <input type="number" name="questao1" value='.$q1.'><br><br>
-        <label for="questao2">Q2</label>
+        <label for="questao2">Sou infeliz.</label>
         <input type="number" name="questao2" value='.$q2.'><br><br>
-        <label for="questao3">Q3</label>
+        <label for="questao3">Sou raivoso.</label>
         <input type="number" name="questao3" value='.$q3.'><br><br>
-        <label for="questao4">Q4</label>
+        <label for="questao4">Sou sociável.</label>
         <input type="number" name="questao4" value='.$q4.'><br><br>
-        <label for="questao5">Q5</label>
+        <label for="questao5">Sou falante.</label>
         <input type="number" name="questao5" value='.$q5.'><br><br>
-        <label for="questao6">Q6</label>
+        <label for="questao6">Sou participativo.</label>
         <input type="number" name="questao6" value='.$q6.'><br><br>
-        <label for="questao7">Q7</label>
+        <label for="questao7">Sou inteligente.</label>
         <input type="number" name="questao7" value='.$q7.'><br><br>
-        <label for="questao8">Q8</label>
+        <label for="questao8">Sou perfeccionista.</label>
         <input type="number" name="questao8" value='.$q8.'><br><br>
-        <label for="questao9">Q9</label>
+        <label for="questao9">Sou curioso.</label>
         <input type="number" name="questao9" value='.$q9.'><br><br>';
         include "../controller/CadastroController.php";
         $res=CadastroController::listarCadastros();
