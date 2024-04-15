@@ -7,7 +7,8 @@ echo '<!DOCTYPE html>
     <title>Formulário Cadastro</title>
     <link rel="stylesheet" href="../estilo.css">
 </head>
-<body>';
+<body>
+    <h2 class=blink_me>CADASTRE-SE</h2>';
     $operacao=$_REQUEST["op"];
     if($operacao=="Alterar"){
         include("../controller/CadastroController.php");

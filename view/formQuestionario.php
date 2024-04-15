@@ -7,11 +7,13 @@ echo '<!DOCTYPE html>
     <title>Formulário Questionário</title>
     <link rel="stylesheet" href="../estilo.css">
 </head>
-<body>';
+<body>
+    <h2>Questionário genial de personalidade</h2>
+    <p>Marque de 1 a 3 o quanto a frase se aplica a você. Não minta.</p>';
     $operacao=$_REQUEST["op"];
     if($operacao=="Alterar"){
         include("../controller/QuestionarioController.php");
-        $res=QuestionarioController::resgataPorId($_REQUEST["idquestionario"]);
+        $res=QuestionarioController::resgataPorId($_REQUEST["idQuestionario"]);
         $qtd=$res->rowCount();
         $row=$res->fetch(PDO::FETCH_OBJ);
         $q1=$row->questao1;

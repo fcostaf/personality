@@ -1,2 +1,1 @@
-excluir
-alterar questionario
+fazer analises por genero

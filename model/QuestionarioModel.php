@@ -125,7 +125,7 @@ class QuestionarioModel{
     public function resgataPorID($idquestionario){
         include '../dao/QuestionarioDAO.php';
         $model=new QuestionarioDAO(null);
-        return $model->resgataPorID($questionario);
+        return $model->resgataPorID($idquestionario);
     }
 
     public function alterarQuestionario(QuestionarioModel $questionario){
