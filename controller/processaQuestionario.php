@@ -51,7 +51,7 @@ function alterar(){
 }
 
 function excluir(){
-    $id=$_REQUEST["idquestionario"];
+    $id=$_REQUEST["idQuestionario"];
     include 'QuestionarioController.php';
     $contr=new QuestionarioController();
     $contr->excluirQuestionario($id);

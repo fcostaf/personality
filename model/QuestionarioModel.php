@@ -137,7 +137,7 @@ class QuestionarioModel{
     public function excluirQuestionario($idquestionario){
         include_once '../dao/QuestionarioDAO.php';
         $questionario=new QuestionarioDAO();
-        $questionario->excluirQuestionario($questionario);
+        $questionario->excluirQuestionario($idquestionario);
     }
 }
 ?>
