@@ -1,0 +1,102 @@
+
+@import url('https://fonts.cdnfonts.com/css/ballet');
+@import url('https://fonts.cdnfonts.com/css/flipped');
+                
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* font-family: 'Ballet', sans-serif; */
+    font-family: 'Flipped', sans-serif;
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    body{
+        background-color: black;
+    }
+}
+
+
+
+.header-footer {
+    background-color: black;
+    color: goldenrod;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-image {
+    background-image: url(vela.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-grid {
+    grid-area: header;
+}
+.menu1-grid {
+    grid-area: menu1;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+.menu2-grid {
+    grid-area: menu2;
+    color: blue;
+    text-align: center;
+    padding: 10px;
+}
+.menu3-grid {
+    grid-area: menu3;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+.main-grid {
+    grid-area: main;
+    min-height: 300px;
+    background-image: url(bolo.jpg);
+    text-align: center;
+}
+.main-grid span {
+    background-color: black;
+    color: goldenrod;
+}
+.footer-grid {
+    grid-area: footer;
+}
+.branco1-grid {
+    grid-area: branco1;
+}
+.branco2-grid {
+    grid-area: branco2;
+}
+.branco3-grid {
+    grid-area: branco3;
+}
+.branco4-grid {
+    grid-area: branco4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header header'
+        'branco1 menu1 branco2 menu2 branco3 menu3 branco4'
+        'branco1 main main main main main branco4'
+        'branco1 main main main main main branco4'
+        'footer footer footer footer footer footer footer ';
+}
