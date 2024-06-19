@@ -9,11 +9,49 @@
     <link rel="stylesheet" href="clube.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Navebarra</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Quem fomos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Obras
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Cobras</a></li>
+                  <li><a class="dropdown-item" href="#">Sobras</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Faça melhor</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Abra o link e ganhe R$ 100,00</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a class="navbar-brand" href="#">
+            <img src="../bolo.jpg" alt="MDB Logo" draggable="false" height="110"/></a>
+      </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-5 navegacao">barra navegacao</div>
+            <div class="col-md-5 navegacao  d-flex align-items-center justify-content-center">
+                <p>
+                    Aqui ia ficar a barra de navegação, antes.
+                </p>
+            </div>
             <div class="col-md-4"></div>
-            <div class="col-md-3 logotipo"><img src="../bolo.jpg" alt="logotipo" width="350px" height="350px"></div>
+            <div class="col-md-3 logotipo"><img src="../vela.jpg" alt="logotipo" width="150px" height="150px" class="rounded-circle"></div>
         </div>
         <div class="row">
             <div class="col-md-2"></div>
@@ -60,17 +98,83 @@
                 </div>
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-3 mapa">mapa</div>
+            <div class="col-md-3 mapa  d-flex align-items-center justify-content-center">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.8663783170264!2d-51.22146782444623!3d-30.04283567492442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e1!3m2!1spt-BR!2sbr!4v1718763758509!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-8 formulario">formulario</div>
+            <div class="col-md-8 formulario">
+                <p class="h3">
+                    Formulário:
+                </p>
+                <div class="row">
+                    <div class="col">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form8Example1" class="form-control" />
+                        <label class="form-label" for="form8Example1" style="background-color: aqua;">Nome</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form8Example2" style="background-color: aqua;">Some</label>
+                        <input type="email" id="form8Example2" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <hr />
+                  
+                  <div class="row">
+                    <div class="col">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form8Example3" style="background-color: aqua;">Comentário</label>
+                        <input type="text" id="form8Example3" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="form8Example4" class="form-control" />
+                        <label class="form-label" for="form8Example4" style="background-color: aqua;">Documentário</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form8Example5" style="background-color: aqua;">Email</label>
+                        <input type="email" id="form8Example5" class="form-control" />
+                      </div>
+                    </div>
+                  </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-3">algo</div>
+            <div class="col-md-3">
+                Plot twist:<br>aqui também pode ter conteúdo.
+            </div>
             <div class="col-md-2"></div>
-            <div class="col-md-5 redes">redes</div>
+            <div class="col-md-5 redes">
+                <div class="text-center">
+                    <p class="h4">Sigam-nos os bons:</p>
+                    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                      <i class="fab fa-facebook-f"></i>
+                    </button>
+                
+                    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                      <i class="fab fa-google"></i>
+                    </button>
+                
+                    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                      <i class="fab fa-twitter"></i>
+                    </button>
+                
+                    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </div>
+            </div>
         </div>
     </div>
 </body>

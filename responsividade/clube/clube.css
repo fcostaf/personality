@@ -1,9 +1,10 @@
-.navegacao {
-    background-color: blue;
+body {
+    background-image: url(https://image.freepik.com/vetores-gratis/fundo-liso-abstrato_56745-149.jpg);
+    background-size: cover;
 }
 
-.logotipo {
-    
+.navegacao {
+    background-color: blue;
 }
 
 .texto {
@@ -18,13 +19,17 @@
 }
 
 .mapa {
-    background-color: yellow;
+    background-image: url(https://th.bing.com/th/id/R.73e1fdec0c1fd79dc0bca1d4ef8fbe66?rik=15kpHnDk2viM4A&riu=http%3a%2f%2fgl.maps-rome.com%2fimg%2f400%2fmapa-antigo-de-roma.jpg&ehk=RU6OcemX%2bBt3fYgsIyBMXR1weiIBcGyCb9ZVrLs6uvM%3d&risl=&pid=ImgRaw&r=0);
+    padding: 20px;
 }
 
 .formulario {
     background-color: gray;
+    padding: 20px;
 }
 
 .redes {
     background-color: green;
+    color: bisque;
+    padding: 20px;
 }
