@@ -1,0 +1,51 @@
+/* --bone: #dddbcbff;
+--caribbean-current: #246a73ff;
+--palatinate: #5c164eff;
+--orange-wheel: #ff7f11ff;
+--giants-orange: #ff5714ff;
+ */
+
+
+.texto {
+    background-color: #ff7f11ff;
+    color: #246a73ff;
+    text-align: center;
+}
+
+.mapa {
+    background-image: url(https://th.bing.com/th/id/R.73e1fdec0c1fd79dc0bca1d4ef8fbe66?rik=15kpHnDk2viM4A&riu=http%3a%2f%2fgl.maps-rome.com%2fimg%2f400%2fmapa-antigo-de-roma.jpg&ehk=RU6OcemX%2bBt3fYgsIyBMXR1weiIBcGyCb9ZVrLs6uvM%3d&risl=&pid=ImgRaw&r=0);
+    padding: 20px;
+}
+
+.formulario {
+    background-color: #246a73ff;
+    color: #ff5714ff;
+    padding: 10px;
+}
+
+.carrossel {
+    background-color: #5c164eff;
+    color: #ff7f11ff;
+}
+.redes {
+    background-color: #dddbcbff;
+    padding: 10px;
+}
+
+.lateral-esquerda {
+    background-color: #ff5714ff;
+}
+
+.lateral-direita {
+    background-color: #5c164eff;
+}
+
+.noticias {
+    background-color: black;
+    color: #dddbcbff;
+}
+
+.mensalidades {
+    background-color: #5c164eff;
+    color: #dddbcbff;
+}
