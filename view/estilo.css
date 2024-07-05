@@ -1,0 +1,12 @@
+:root {
+    --especial1: #f85e00ff;
+    --divs: #ffc857ff;
+    --especial2: #419d78ff;
+    --fundo: #1f2041ff;
+    --letra: #107896ff;
+}
+
+body {
+    color: white;
+    background-color: var(--fundo);
+}
