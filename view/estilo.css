@@ -9,4 +9,24 @@
 body {
     color: white;
     background-color: var(--fundo);
+    text-align: justify;
+}
+
+h1, h2 {
+    color: var(--especial1);
+}
+
+table {
+    background-color: var(--divs);
+    color: var(--fundo);
+    font-weight: bold;
+}
+
+tr, td {
+    text-align: center;
+    padding: 5px;
+}
+
+button {
+    background-color: var(--especial2);
 }

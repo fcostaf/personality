@@ -1,5 +1,10 @@
 <?php
+session_start();
 
+if (!isset($_SESSION['user_id'])) {
+  header('Location: login.php');
+  exit();
+  }
 
 echo '<!DOCTYPE html>
 <html lang="pt-br">
@@ -14,7 +19,7 @@ echo '<!DOCTYPE html>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="../index.html">Personality Q</a>
+          <a class="navbar-brand" href="../index.php">Personality Q</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
