@@ -58,6 +58,6 @@ function excluir(){
 }
 
 function listar(){
-    include_once '../view/formListarQuestionario.php';
+    header('Location: ../view/formListarQuestionario.php');
 }
 ?>

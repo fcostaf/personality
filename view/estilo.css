@@ -16,10 +16,8 @@ h1, h2 {
     color: var(--especial1);
 }
 
-table {
-    background-color: var(--divs);
-    color: var(--fundo);
-    font-weight: bold;
+h3 {
+    color: var(--especial2);
 }
 
 tr, td {

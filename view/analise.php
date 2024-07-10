@@ -63,7 +63,7 @@ include "../controller/CadastroController.php";
         $sum_idade=0;
         $masc=0;
         $fem=0;
-        echo '<table>
+        echo '<table class="table table-hover table-striped table-bordered">
                 <tr>
                 <th>N</th>
                 <th>Média idade</th>
@@ -106,7 +106,8 @@ include_once "../controller/QuestionarioController.php";
         $sum8=0;
         $sum9=0;
 
-        echo "<table>
+        echo "<table class='table table-hover table-striped table-bordered'>
+                <tr><td></td><td colspan=3><h3>NEUROTICISMO</h3></td><td colspan=3><h3>EXTROVERSÃO / SOCIALIZAÇÃO</h3></td><td colspan=3><h3>REALIZAÇÃO / ABERTURA</h3></td></tr>
                 <tr>
                 <th></th>
                 <th>Sou ansioso</th>
@@ -171,10 +172,66 @@ include_once "../controller/QuestionarioController.php";
         echo "<p>Nenhum registro encontrado!</p>";
     }
 
-  echo '<br><a href="../index.html">Voltar</a>';
 
-
-echo '</body>
+echo '
+<div class="container">
+  <div class="col-md-12 d-flex justify-content-center">
+      <h2>Interpretação</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-2 d-flex">
+      <h3>NEUROTICISMO</h3>
+    </div>
+    <div class="col-md-10 d-flex justify-content-center">';
+        if ($medA < 2) {
+          echo 'O grupo apresenta baixos índices de Neuroticismo, o que sugere maior facilidade de foco nas tarefas e consequentemente a possibilidade de realizar atividades mais exigentes, pois isto não tenderia a causar estresse emocional significativo.';
+        }
+        else if ($medA < 3) {
+          echo 'O grupo apresenta índices médios de Neuroticismo, o que sugere capacidade de foco nas tarefas, mas possibilidade de aumento do estresse emocional em atividades mais exigentes. Uma intervenção voltada para o manejo do estresse pode ajudar o grupo a realizar tarefas complexas sem que as emoções interfiram negativamente no processo.';
+        }
+        else {
+          echo 'O grupo apresenta altos índices de Neuroticismo, o que sugere dificuldade com o foco nas tarefas por causa da interferência do estresse emocional. É importante uma intervenção constante para abordar os aspectos emocionais do processo a fim de diminuir esta interferência. Tarefas complexas e mais exigentes devem ser feitas junto com um monitoramento das reações emocionais do grupo.';
+        };
+echo '
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-2 d-flex">
+      <h3>EXTROVERSÃO /SOCIALIZAÇÃO</h3>
+    </div>
+    <div class="col-md-10 d-flex justify-content-center">';
+        if ($medB < 2) {
+          echo 'O grupo é introvertido e composto por indivíduos autocentrados. Trabalhos em grupo podem precisar de uma estruturação considerável para que os integrantes se coordenem entre si. A participação deve ser incentivada explicitamente, pois há pouca iniciativa do grupo neste sentido.';
+        }
+        else if ($medB < 3) {
+          echo 'O grupo apresenta um equilíbrio entre introversão e extroversão. Desta forma, as atividades podem ser estruturadas de forma flexível, tanto no nível individual quanto coletivo.';
+        }
+        else {
+          echo 'O grupo é predominantemente extrovertido e sociável. As atividades em grupo serão preferíveis, mas é necessária uma intervenção constante para retomar o foco na tarefa, pois haverá uma tendência ao desvio da atividade em favor de interações de tipo pessoal.';
+        };
+echo '
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-2 d-flex">
+      <h3>REALIZAÇÃO /ABERTURA</h3>
+    </div>
+    <div class="col-md-10 d-flex justify-content-center">';
+        if ($medC < 2) {
+          echo 'a';
+        }
+        else if ($medC < 3) {
+          echo 'a';
+        }
+        else {
+          echo 'a';
+        };
+echo '
+    </div>
+  </div>
+</body>
 </html>'
 
 

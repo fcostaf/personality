@@ -73,8 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   Cadastro
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="view/formCadastro.php?op=Incluir">Incluir</a></li>
-                  <li><a class="dropdown-item" href="view/formListarCadastro.php?op=Listar">Listar</a></li>
+                  <li><a class="dropdown-item" href="formCadastro.php?op=Incluir">Incluir</a></li>
+                  <li><a class="dropdown-item" href="formListarCadastro.php?op=Listar">Listar</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -82,12 +82,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   Questionário
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="view/formQuestionario.php?op=Incluir">Incluir</a></li>
-                  <li><a class="dropdown-item" href="view/formListarQuestionario.php?op=Listar">Listar</a></li>
+                  <li><a class="dropdown-item" href="formQuestionario.php?op=Incluir">Incluir</a></li>
+                  <li><a class="dropdown-item" href="formListarQuestionario.php?op=Listar">Listar</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="view/analise.php">Análise</a>
+                <a class="nav-link" aria-current="page" href="analise.php">Análise</a>
               </li>
               <?php
               if (!isset($_SESSION['user_id'])) { echo 

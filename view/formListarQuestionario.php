@@ -59,7 +59,7 @@ echo '<!DOCTYPE html>
     $res=QuestionarioController::listarQuestionarios();
     $qtd=$res->rowCount();
     if($qtd>0){
-        echo '<table>
+        echo '<table class="table table-hover table-striped table-bordered">
                 <tr>
                 <th>#</th>
                 <th>Nome</th>
@@ -75,7 +75,7 @@ echo '<!DOCTYPE html>
                 <th>Sou perfeccionista</th>
                 <th>Sou curioso</th>
                 <th>Med3</th>
-                <th></th><th></th>
+                <th></th>
                 </tr>';
         while($row=$res->fetch(PDO::FETCH_OBJ)){
             include_once "../controller/CadastroController.php";
@@ -113,7 +113,7 @@ echo '<!DOCTYPE html>
         echo "<p>Nenhum registro encontrado!</p>";
     }
 
-  echo '<br><a href="../index.html">Voltar</a>
+  echo '
   </body>
 </html>'
 ?>

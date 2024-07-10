@@ -87,9 +87,6 @@ echo '<!DOCTYPE html>
         <input type="hidden" name="op" value='.$operacao.'><br>
         <input type="submit" value='.$operacao.'>
         </form>
-        <br>
-        <a href="../index.html">Voltar</a>
-
 
 </body>
 </html>'

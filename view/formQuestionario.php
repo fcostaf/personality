@@ -55,7 +55,7 @@ echo '<!DOCTYPE html>
         <div class="col-md-12 d-flex justify-content-center">
             <h1>Questionário</h1>
         </div>
-    <p>Marque de 1 a 3 o quanto a frase se aplica a você. Não minta.</p>';
+    <p>Marque de 1 a 4 o quanto a frase se aplica a você. Não minta.</p>';
     $operacao=$_REQUEST["op"];
     if($operacao=="Alterar"){
         include("../controller/QuestionarioController.php");
@@ -132,7 +132,7 @@ echo '<!DOCTYPE html>
         <input type="hidden" name="op" value='.$operacao.'><br>
         <input type="submit" value='.$operacao.'>
         </form><br>
-        <a href="../index.html">Voltar</a>
+        
         </body>
         </html>'
 ?>

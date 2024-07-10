@@ -65,7 +65,7 @@ echo '<!DOCTYPE html>
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Gênero</th>
-                <th></th><th></th>
+                <th></th>
                 </tr>';
         while($row=$res->fetch(PDO::FETCH_OBJ)){
             echo "<tr>
@@ -87,7 +87,7 @@ echo '<!DOCTYPE html>
         echo "<p>Nenhum registro encontrado!</p>";
     }
 
-  echo '<br><a href="../index.html">Voltar</a>
+  echo '
 </body>
 </html>'
 ?>

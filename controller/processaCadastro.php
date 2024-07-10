@@ -41,6 +41,6 @@ function excluir(){
 }
 
 function listar(){
-    include_once '../view/formListarCadastro.php';
+    header('Location: ../view/formListarCadastro.php');
 }
 ?>
