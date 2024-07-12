@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myPlot"></div>
+    <div id="idade"></div>
+
+    <script type="module">
+
+        import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
+
+        // myPlot
+        
+        const plot = Plot.rectY({length: 10}, Plot.binX({y: "count"}, {x: Math.random})).plot();
+        const div = document.querySelector("#myPlot");
+        div.append(plot);
+
+        // idade
+
+        const grupo = [
+            {Nome: 'Mario', Idade: 51},
+            {Nome: 'Fabrício', Idade: 92}
+        ]
+
+        document.querySelector('#idade').append(
+            Plot.plot({
+                marks: [
+                Plot.lineY(grupo, {x: "Nome", y: "Idade"}),
+                    Plot.frame(),
+                    Plot.text(["Idade"], {frameAnchor: "top"})
+                ]
+                }))
+        
+    </script>
+</body>
+</html>

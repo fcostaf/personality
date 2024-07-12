@@ -174,6 +174,7 @@ include_once "../controller/QuestionarioController.php";
 
 
 echo '
+<div id="genero"></div>
 <div class="container">
   <div class="col-md-12 d-flex justify-content-center">
       <h2>Interpretação</h2>
@@ -228,11 +229,26 @@ echo '
         else {
           echo 'O grupo apresenta altos índices de realização e abertura à experiência. Portanto, as atividades propostas devem ser exigentes e desafiadoras para manter um senso de propósito e sentido, já que tarefas muito fáceis poderão ser vistas como pouco motivadoras.';
         };
-echo '
+echo "
     </div>
   </div>
+
+<script type='module'>
+
+import * as Plot from 'https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm';
+const genero = [
+                {Gênero: 'Masculino', Qtd: $masc},
+                {Gênero: 'Feminino', Qtd: $fem}
+              ];
+
+document.querySelector('#genero').append(
+  Plot.plot({
+      marks: [
+      Plot.barY(genero, {x: 'Gênero', y: 'Qtd'}),
+          Plot.frame(),
+      ]
+      }))
+
+</script>
 </body>
-</html>'
-
-
-?>
+</html>"?>
