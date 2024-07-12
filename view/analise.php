@@ -220,13 +220,13 @@ echo '
     </div>
     <div class="col-md-10 d-flex justify-content-center">';
         if ($medC < 2) {
-          echo 'a';
+          echo 'O grupo apresenta baixos índices de realização e abertura à experiência. Isto constitui um desafio para qualquer tipo de atividade, já que há pouco envolvimento e dedicação às tarefas, pouca curiosidade em aprender coisas novas e pouco sentimento de capacidade para realizar as atividades. Uma intervenção incentivadora ao longo de todo o processo é necessária.';
         }
         else if ($medC < 3) {
-          echo 'a';
+          echo 'O grupo apresenta índices médios de realização e abertura à experiência, sugerindo um fluxo regular da execução das atividades. É recomendado acrescentar leves desafios a cada tarefa a fim de aumentar a percepção de capacidade dos integrantes.';
         }
         else {
-          echo 'a';
+          echo 'O grupo apresenta altos índices de realização e abertura à experiência. Portanto, as atividades propostas devem ser exigentes e desafiadoras para manter um senso de propósito e sentido, já que tarefas muito fáceis poderão ser vistas como pouco motivadoras.';
         };
 echo '
     </div>
