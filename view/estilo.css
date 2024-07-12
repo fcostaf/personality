@@ -28,3 +28,7 @@ tr, td {
 button {
     background-color: var(--especial2);
 }
+
+.plot {
+    color: var(--especial1);
+}

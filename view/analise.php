@@ -174,7 +174,25 @@ include_once "../controller/QuestionarioController.php";
 
 
 echo '
-<div id="genero"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 d-flex justify-content-center">
+      <div id="genero" class="plot"></div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <div id="n" class="plot"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 d-flex justify-content-center">
+      <div id="es" class="plot"></div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <div id="ra" class="plot"></div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="col-md-12 d-flex justify-content-center">
       <h2>Interpretação</h2>
@@ -241,10 +259,52 @@ const genero = [
                 {Gênero: 'Feminino', Qtd: $fem}
               ];
 
+const n = [
+  {Questao: 'Sou ansioso', med: $med1},
+  {Questao: 'Sou infeliz', med: $med2},
+  {Questao: 'Sou raivoso', med: $med3}
+];
+
+const es = [
+  {Questao: 'Sou sociável', med: $med4},
+  {Questao: 'Sou falante', med: $med5},
+  {Questao: 'Sou participativo', med: $med6}
+];
+
+const ra = [
+  {Questao: 'Sou inteligente', med: $med7},
+  {Questao: 'Sou perfeccionista', med: $med8},
+  {Questao: 'Sou curioso', med: $med9}
+];
+
 document.querySelector('#genero').append(
   Plot.plot({
       marks: [
       Plot.barY(genero, {x: 'Gênero', y: 'Qtd'}),
+          Plot.frame(),
+      ]
+      }));
+
+document.querySelector('#n').append(
+  Plot.plot({
+      marks: [
+      Plot.barY(n, {x: 'Questao', y: 'med'}),
+          Plot.frame(),
+      ]
+      }));
+
+document.querySelector('#es').append(
+  Plot.plot({
+      marks: [
+      Plot.barY(es, {x: 'Questao', y: 'med'}),
+          Plot.frame(),
+      ]
+      }));
+    
+document.querySelector('#ra').append(
+  Plot.plot({
+      marks: [
+      Plot.barY(ra, {x: 'Questao', y: 'med'}),
           Plot.frame(),
       ]
       }))
