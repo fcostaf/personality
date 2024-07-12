@@ -177,18 +177,18 @@ echo '
 <div class="container">
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center">
-      <div id="genero" class="plot"></div>
+      <div id="genero" class="plot1"></div>
     </div>
     <div class="col-md-6 d-flex justify-content-center">
-      <div id="n" class="plot"></div>
+      <div id="n" class="plot2"></div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center">
-      <div id="es" class="plot"></div>
+      <div id="es" class="plot3"></div>
     </div>
     <div class="col-md-6 d-flex justify-content-center">
-      <div id="ra" class="plot"></div>
+      <div id="ra" class="plot4"></div>
     </div>
   </div>
 </div>
@@ -286,7 +286,7 @@ document.querySelector('#genero').append(
       }));
 
 document.querySelector('#n').append(
-  Plot.plot({
+  Plot.plot({y: {domain: [0, 4]},
       marks: [
       Plot.barY(n, {x: 'Questao', y: 'med'}),
           Plot.frame(),
@@ -294,7 +294,7 @@ document.querySelector('#n').append(
       }));
 
 document.querySelector('#es').append(
-  Plot.plot({
+  Plot.plot({y: {domain: [0, 4]},
       marks: [
       Plot.barY(es, {x: 'Questao', y: 'med'}),
           Plot.frame(),
@@ -302,7 +302,7 @@ document.querySelector('#es').append(
       }));
     
 document.querySelector('#ra').append(
-  Plot.plot({
+  Plot.plot({y: {domain: [0, 4]},
       marks: [
       Plot.barY(ra, {x: 'Questao', y: 'med'}),
           Plot.frame(),

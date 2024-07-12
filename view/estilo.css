@@ -29,6 +29,15 @@ button {
     background-color: var(--especial2);
 }
 
-.plot {
+.plot1 {
     color: var(--especial1);
+}
+.plot2 {
+    color: var(--letra);
+}
+.plot3 {
+    color: var(--especial2);
+}
+.plot4 {
+    color: var(--divs);
 }
