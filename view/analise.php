@@ -173,7 +173,7 @@ include_once "../controller/QuestionarioController.php";
     }
 
 
-echo '
+echo '<hr>
 <div class="container">
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center">
