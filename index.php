@@ -76,5 +76,38 @@ echo '
         </div>
               ';};?>
     </div>
+    <div class="container">
+      <div class="col-md-12 d-flex justify-content-center">
+        <div id='tree' class='arvore'>
+          </div>
+          </div>
+      </div>
+    <script type='module'>
+      import * as Plot from 'https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm';
+
+      var fatores = [
+        "Fatores/Neuroticismo/Sou ansioso",
+        "Fatores/Neuroticismo/Sou infeliz",
+        "Fatores/Neuroticismo/Sou raivoso",
+        "Fatores/Extroversão - Socialização/Sou sociável",
+        "Fatores/Extroversão - Socialização/Sou falante",
+        "Fatores/Extroversão - Socialização/Sou participativo",
+        "Fatores/Realização - Abertura à experiência/Sou inteligente",
+        "Fatores/Realização - Abertura à experiência/Sou perfeccionista",
+        "Fatores/Realização - Abertura à experiência/Sou curioso",
+      ]
+      document.querySelector('#tree').append(
+      Plot.plot({style: {fontSize:'15pt'},
+        axis: null,
+        height: 500,
+        width: 1000,
+        margin: 10,
+        marginLeft: 140,
+        marginRight: 220,
+        marks: [
+          Plot.tree(fatores, {textStroke: "none"})
+        ]
+      }));
+    </script>
 </body>
 </html>

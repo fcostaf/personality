@@ -8,7 +8,8 @@
 <body>
     <div id="myPlot"></div>
     <div id="idade"></div>
-
+    <div id='tree'>
+    </div>
     <script type="module">
 
         import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
@@ -35,6 +36,26 @@
                 ]
                 }))
         
+          
+      var gods = [
+        "Chaos/Gaia/Mountains",
+        "Chaos/Gaia/Pontus",
+        "Chaos/Gaia/Uranus",
+        "Chaos/Eros",
+        "Chaos/Erebus",
+        "Chaos/Tartarus"
+      ]
+      document.querySelector('#tree').append(
+      Plot.plot({
+        axis: null,
+        height: 100,
+        margin: 10,
+        marginLeft: 40,
+        marginRight: 120,
+        marks: [
+          Plot.tree(gods, {textStroke: "white"})
+        ]
+      }));
     </script>
 </body>
 </html>

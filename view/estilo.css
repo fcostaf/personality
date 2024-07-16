@@ -59,3 +59,9 @@ input[type='number']{
 .reab {
     color: var(--especial2);
 }
+
+.arvore {
+    color: var(--especial2);
+    margin-top: 30px;
+    font-weight: bold;
+}

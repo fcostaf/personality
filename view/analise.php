@@ -280,7 +280,7 @@ const ra = [
 document.querySelector('#genero').append(
   Plot.plot({
       marks: [
-      Plot.barY(genero, {x: 'Gênero', y: 'Qtd'}),
+      Plot.barY(genero, {x: 'Gênero', y: 'Qtd', tip: true}),
           Plot.frame(),
       ]
       }));
@@ -288,7 +288,7 @@ document.querySelector('#genero').append(
 document.querySelector('#n').append(
   Plot.plot({y: {domain: [0, 4]},
       marks: [
-      Plot.barY(n, {x: 'Questao', y: 'med'}),
+      Plot.barY(n, {x: 'Questao', y: 'med', tip: true}),
           Plot.frame(),
       ]
       }));
@@ -296,7 +296,7 @@ document.querySelector('#n').append(
 document.querySelector('#es').append(
   Plot.plot({y: {domain: [0, 4]},
       marks: [
-      Plot.barY(es, {x: 'Questao', y: 'med'}),
+      Plot.barY(es, {x: 'Questao', y: 'med', tip: true}),
           Plot.frame(),
       ]
       }));
@@ -304,7 +304,7 @@ document.querySelector('#es').append(
 document.querySelector('#ra').append(
   Plot.plot({y: {domain: [0, 4]},
       marks: [
-      Plot.barY(ra, {x: 'Questao', y: 'med'}),
+      Plot.barY(ra, {x: 'Questao', y: 'med', tip: true}),
           Plot.frame(),
       ]
       }))
