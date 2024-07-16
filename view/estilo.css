@@ -14,6 +14,8 @@ body {
 
 h1, h2 {
     color: var(--especial1);
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 h3 {
@@ -28,6 +30,12 @@ tr, td {
 button {
     background-color: var(--especial2);
 }
+input[type=submit] {
+    background-color: var(--especial2);
+}
+input[type='number']{
+    width: 80px;
+}
 
 .plot1 {
     color: var(--especial1);
@@ -36,8 +44,18 @@ button {
     color: var(--letra);
 }
 .plot3 {
-    color: var(--especial2);
+    color: var(--divs);
 }
 .plot4 {
+    color: var(--especial2);
+}
+
+.neu {
+    color: var(--letra);
+}
+.exso {
     color: var(--divs);
+}
+.reab {
+    color: var(--especial2);
 }

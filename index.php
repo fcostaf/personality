@@ -67,11 +67,14 @@ echo '
                 O Modelo dos Cinco Fatores da Personalidade (5F) deriva de um estudo que analisou os adjetivos presentes no vocabulário para descrever a personalidade das pessoas e chegou a cinco principais categorias ou fatores que agrupam esses termos: Neuroticismo (grau de instabilidade emocional, tendência a emoções negativas), Extroversão (nível de comunicabilidade, expressão de si mesmo em ambientes compartilhados), Socialização (quanto a pessoa se preocupa com os outros e com a boa convivência entre as pessoas), Realização (quanto a pessoa é dedicada em realizar seus objetivos com dedicação, planejamento e foco) e Abertura à Experiência (se a pessoa é mais ou menos disposta a mudar seus valores morais, a buscar atividades diferentes das que está acostumada, a ser curiosa e interessada em novidades).
             </p>
         </div>
+        <?php if (!isset($_SESSION['user_id'])) { echo 
+              '
         <div class="col-md-12 d-flex justify-content-center">
           <p>
             Não tem uma conta? <a href="view/register.php">Registre-se agora mesmo</a>
           </p>
         </div>
+              ';};?>
     </div>
 </body>
 </html>

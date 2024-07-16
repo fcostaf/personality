@@ -107,7 +107,7 @@ include_once "../controller/QuestionarioController.php";
         $sum9=0;
 
         echo "<table class='table table-hover table-striped table-bordered'>
-                <tr><td></td><td colspan=3><h3>NEUROTICISMO</h3></td><td colspan=3><h3>EXTROVERSÃO / SOCIALIZAÇÃO</h3></td><td colspan=3><h3>REALIZAÇÃO / ABERTURA</h3></td></tr>
+                <tr><td></td><td colspan=3><h3 class='neu'>NEUROTICISMO</h3></td><td colspan=3><h3 class='exso'>EXTROVERSÃO / SOCIALIZAÇÃO</h3></td><td colspan=3><h3 class='reab'>REALIZAÇÃO / ABERTURA</h3></td></tr>
                 <tr>
                 <th></th>
                 <th>Sou ansioso</th>
@@ -173,7 +173,7 @@ include_once "../controller/QuestionarioController.php";
     }
 
 
-echo '<hr>
+echo '
 <div class="container">
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center">
@@ -199,7 +199,7 @@ echo '<hr>
   </div>
   <div class="row">
     <div class="col-md-2 d-flex">
-      <h3>NEUROTICISMO</h3>
+      <h3 class="neu">NEUROTICISMO</h3>
     </div>
     <div class="col-md-10 d-flex justify-content-center">';
         if ($medA < 2) {
@@ -217,7 +217,7 @@ echo '
   <hr>
   <div class="row">
     <div class="col-md-2 d-flex">
-      <h3>EXTROVERSÃO /SOCIALIZAÇÃO</h3>
+      <h3 class="exso">EXTROVERSÃO /SOCIALIZAÇÃO</h3>
     </div>
     <div class="col-md-10 d-flex justify-content-center">';
         if ($medB < 2) {
@@ -235,7 +235,7 @@ echo '
   <hr>
   <div class="row">
     <div class="col-md-2 d-flex">
-      <h3>REALIZAÇÃO /ABERTURA</h3>
+      <h3 class="reab">REALIZAÇÃO /ABERTURA</h3>
     </div>
     <div class="col-md-10 d-flex justify-content-center">';
         if ($medC < 2) {

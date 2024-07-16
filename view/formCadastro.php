@@ -76,18 +76,30 @@ echo '<!DOCTYPE html>
         $operacao="Incluir";
     }
 
-    echo '<form method="post" action="../controller/processaCadastro.php">
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" value="'.$nome.'"><br>
-        <label for="idade">Idade</label>
-        <input type="text" name="idade" value="'.$idade.'"><br>
-        <label for="genero">Gênero</label>
-        <input type="text" name="genero" value="'.$genero.'"><br>
-        <input type="hidden" name="id" value='.$id.'><br>
-        <input type="hidden" name="op" value='.$operacao.'><br>
-        <input type="submit" value='.$operacao.'>
+    echo '<div class="container">
+          <div class="col-md-12 d-flex justify-content-center">
+          <form method="post" action="../controller/processaCadastro.php">
+          <table>
+            <tr>
+              <td><label for="nome">Nome</label></td>
+              <td><input type="text" name="nome" value="'.$nome.'"></td>
+            </tr>
+            <tr>
+              <td><label for="idade">Idade</label></td>
+              <td><input type="text" name="idade" value="'.$idade.'"></td>
+            </tr>
+              <td><label for="genero">Gênero</label></td>
+              <td><input type="text" name="genero" value="'.$genero.'"></td>
+            </tr>
+            <tr>
+              <td colspan=2><input type="hidden" name="id" value='.$id.'>
+              <input type="hidden" name="op" value='.$operacao.'>
+              <input type="submit" value='.$operacao.'></td>
+            </tr>
+          </table>
         </form>
-
+        </div>
+        </div>
 </body>
 </html>'
 ?>
