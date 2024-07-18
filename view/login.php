@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="../index.php">Personality Q</a>
+          <a class="navbar-brand" href="../index.php"><img src="mascaras.jpg" width=120px height=120px></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -104,5 +104,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </table>
         </form>
     </div>
+    </div>
+
+    <section class="futer">
+        <!-- Footer -->
+        <footer class="text-center text-white bg-dark">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: CTA -->
+            <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                Agora você pode cadastrar novos participantes, responder ao questionário ou visualizar a análise dos resultados.
+              </p>
+            </section>
+            <!-- Section: CTA -->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Copyright:
+            <a class="text-white" href="#">PQI - Personality Q Institute</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+      </section>
 </body>
 </html>

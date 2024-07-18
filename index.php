@@ -16,7 +16,7 @@ echo '
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="index.php">Personality Q</a>
+          <a class="navbar-brand" href="index.php"><img src="view/mascaras.jpg" width=120px height=120px></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -67,14 +67,7 @@ echo '
                 O Modelo dos Cinco Fatores da Personalidade (5F) deriva de um estudo que analisou os adjetivos presentes no vocabulário para descrever a personalidade das pessoas e chegou a cinco principais categorias ou fatores que agrupam esses termos: Neuroticismo (grau de instabilidade emocional, tendência a emoções negativas), Extroversão (nível de comunicabilidade, expressão de si mesmo em ambientes compartilhados), Socialização (quanto a pessoa se preocupa com os outros e com a boa convivência entre as pessoas), Realização (quanto a pessoa é dedicada em realizar seus objetivos com dedicação, planejamento e foco) e Abertura à Experiência (se a pessoa é mais ou menos disposta a mudar seus valores morais, a buscar atividades diferentes das que está acostumada, a ser curiosa e interessada em novidades).
             </p>
         </div>
-        <?php if (!isset($_SESSION['user_id'])) { echo 
-              '
-        <div class="col-md-12 d-flex justify-content-center">
-          <p>
-            Não tem uma conta? <a href="view/register.php">Registre-se agora mesmo</a>
-          </p>
-        </div>
-              ';};?>
+        
     </div>
     <div class="container">
       <div class="col-md-12 d-flex justify-content-center">
@@ -82,6 +75,38 @@ echo '
           </div>
           </div>
       </div>
+
+      <section class="futer">
+        <!-- Footer -->
+        <footer class="text-center text-white bg-dark">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: CTA -->
+            <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                <?php if (!isset($_SESSION['user_id'])) { echo 
+                '
+                <p>Não tem uma conta?</p><p><a href="view/register.php">Registre-se agora mesmo</a></p>
+            
+                ';} else {
+                  echo 'Agora você pode cadastrar novos participantes, responder ao questionário ou visualizar a análise dos resultados.';
+                }?>
+              </p>
+            </section>
+            <!-- Section: CTA -->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Copyright:
+            <a class="text-white" href="#">PQI - Personality Q Institute</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+      </section>
+
     <script type='module'>
       import * as Plot from 'https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm';
 

@@ -65,3 +65,13 @@ input[type='number']{
     margin-top: 30px;
     font-weight: bold;
 }
+
+.logo {
+    color: var(--especial1);
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+.futer {
+    margin-top: 50px;
+}
