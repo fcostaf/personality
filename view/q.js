@@ -22,7 +22,7 @@ function inserir() {
     var simbolos_inner = [];
     var alvos = 0;
     console.log('oi')
-    while (simbolos_inner.length < 300) {
+    while (simbolos_inner.length < 3000) {
         var simbolo = aleatorio_entre(0, 2);
         if (simbolo == 0) {
             alvos++;
@@ -50,9 +50,10 @@ var acertos = 0;
 function encontrar() {
     acertos++;
     contador_acertos.innerHTML = acertos;
+    this.removeEventListener('click', encontrar);
 }
 
 alvos_botao = document.getElementsByClassName('alvo');
 for (var a=0; a < alvos_botao.length; a++) {
-    addEventListener('click', encontrar)
+    addEventListener('click', encontrar);
 }
